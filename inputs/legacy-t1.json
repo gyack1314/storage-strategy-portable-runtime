@@ -1,0 +1,29 @@
+{
+  "format": 1,
+  "required": [
+    "forward"
+  ],
+  "steps": 5,
+  "work_slots": 2,
+  "offers": 1,
+  "program": [
+    [
+      "load",
+      "load"
+    ],
+    [
+      "const",
+      4
+    ],
+    [
+      "add"
+    ],
+    [
+      "offer",
+      "feeder"
+    ],
+    [
+      "halt"
+    ]
+  ]
+}

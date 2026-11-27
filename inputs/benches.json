@@ -1,0 +1,57 @@
+{
+  "benches": {
+    "T1": {
+      "caps": [
+        "forward"
+      ],
+      "steps": 24,
+      "work_slots": 6,
+      "offers": 2,
+      "ports": [
+        "feeder"
+      ]
+    },
+    "T2": {
+      "caps": [
+        "forward",
+        "reverse"
+      ],
+      "steps": 32,
+      "work_slots": 8,
+      "offers": 4,
+      "ports": [
+        "feeder",
+        "inverter"
+      ]
+    }
+  },
+  "runs": [
+    {
+      "id": "normal",
+      "readings": {
+        "load": 7
+      }
+    },
+    {
+      "id": "missing",
+      "readings": {
+        "load": null
+      }
+    },
+    {
+      "id": "edge",
+      "readings": {
+        "load": 32767
+      }
+    },
+    {
+      "id": "denial",
+      "readings": {
+        "load": 8
+      },
+      "deny": [
+        "inverter"
+      ]
+    }
+  ]
+}

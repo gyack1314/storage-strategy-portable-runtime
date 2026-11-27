@@ -1,0 +1,8 @@
+fn base(request: power) -> power { return request + 0.4; }
+strategy balance {
+  if available(load) {
+    let power: power = base(reading(load));
+    if cap(reverse) { offer inverter, power; }
+    else { repeat 2 { offer feeder, power; } }
+  } else { offer feeder, 0.0; }
+}

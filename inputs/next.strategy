@@ -1,0 +1,4 @@
+strategy balance {
+  offer feeder, 0.5;
+  offer inverter, 1.5;
+}
